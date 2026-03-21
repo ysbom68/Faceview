@@ -2,39 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Centered Image</title>
+  <title>Layout</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: #f4f4f4;
       font-family: Arial, sans-serif;
     }
 
-    .container {
-      display: flex;
-      align-items: center;
-      gap: 40px;
+    /* Top-left text */
+    .text {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 32px;
+      font-weight: bold;
     }
 
-    .image-section {
-      text-align: left;
+    /* Center everything */
+    .center {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     img {
-      max-width: 800px;
-      max-height: 600px;
+      width: 500px;
+      max-width: 90vw;
+      height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     button {
-      margin-top: 20px;
-      padding: 15px 160px;
-      font-size: 20px;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
       border: none;
       border-radius: 5px;
       background-color: #007BFF;
@@ -45,84 +51,18 @@
     button:hover {
       background-color: #0056b3;
     }
-
-    .text {
-      font-size: 75px;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    
-    <div class="image-section">
-      <img src="passport-photo-portrait-young-man-white-background_1028938-330516-770429039.jpg" alt="Centered Image">
-      <br>
-      <button>Next</button>
-    </div>
+  <div class="text">
+    Example text
+  </div>
 
-    <div class="text">
-      FaceView
-    </div>
-
+  <div class="center">
+    <img src="passport-photo-portrait-young-man-white-background_1028938-330516-770429039.jpg" alt="Centered Image">
+    <button>Next</button>
   </div>
 
 </body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Image with Text Overlay</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      position: relative;
-      display: inline-block;
-    }
-
-    img {
-      width: 600px;
-      max-width: 90vw;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: block;
-    }
-
-    .text {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      font-size: 32px;
-      font-weight: bold;
-      color: white;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 8px 12px;
-      border-radius: 6px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <img src="passport-photo-portrait-young-man-white-background_1028938-330516-770429039.jpg" alt="Image">
-    <div class="text">FaceView</div>
-  </div>
-
-</body>
-</html>
-  
+</html
