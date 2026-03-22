@@ -60,7 +60,7 @@
   </div>
 
   <div class="center">
-    <img src="passport-photo-portrait-young-man-white-background_1028938-330516-770429039.jpg" alt="Centered Image">
+   <img id="myImage" src="1.jpg">
     <button onclick="generateNumber()">Next Faculty Member</button>
   </div>
 
@@ -76,7 +76,7 @@
   document.getElementById("output").textContent = randomNumber;
 
     // build image filename
-       let imagePath = num + ".jpg";
+       let imagePath = randomNumber + ".jpg";
 
      // change image
   document.getElementById("myImage").src = imagePath; 
