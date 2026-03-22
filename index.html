@@ -71,8 +71,15 @@
   
   <script>
     function generateNumber() {
+      //random number 1-208
   let randomNumber = Math.floor(Math.random() * 208) + 1;
   document.getElementById("output").textContent = randomNumber;
+
+    // build image filename
+       let imagePath = num + ".jpg";
+
+     // change image
+  document.getElementById("myImage").src = imagePath; 
       }
   </script>
 
