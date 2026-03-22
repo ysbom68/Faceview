@@ -59,7 +59,7 @@
   <div class="text">
     WestViewer
   </div>
-  <p id="output">Click the button</p>
+  <p id="output"></p>
   <div class="center">
    <img id="myImage" src="1.jpg">
     <button onclick="generateNumber()">Next Faculty Member</button>
@@ -68,7 +68,11 @@
      
  
 <input type="range" id="slider" min="1" max="10" value="1">
-
+input[type="range"] {
+  width: 200px;
+  accent-color: #007BFF; /* changes main color in modern browsers */
+}
+  
 <p>Rating: <span id="valueDisplay">1</span></p>
 <button>Submit Rating</button>
     
