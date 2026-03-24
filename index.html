@@ -69,11 +69,10 @@
 
      
  
-<input type="range" id="slider" min="1" max="10" value="1">
+
   
-<p>Rating: <span id="valueDisplay">1</span></p>
-<button>Submit Rating</button>
-    
+
+
   <script>
   document.getElementById("slider").oninput = function() {
     document.getElementById("valueDisplay").textContent = this.value;
@@ -81,11 +80,13 @@
 </script>
 
   <script>
+  
     function generateNumber() {
       //random number 1-96
   let randomNumber = Math.floor(Math.random() * 96) + 1;
   document.getElementById("output").textContent = randomNumber;
 
+    let Gender filter
     // build image filename
        let imagePath = randomNumber + ".jpg";
 
