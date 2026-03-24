@@ -72,14 +72,14 @@
 </script>
 
   <script>
-  
+  let GenderFilter = 1
     function generateNumber() {
       //random number 1-96
   let randomNumber = Math.floor(Math.random() * 96) + 1;
   document.getElementById("output").textContent = randomNumber;
 
     // build image filename
-       let imagePath = randomNumber + ".jpg";
+       let imagePath = GenderFilter + randomNumber + ".jpg";
 
      // change image
   document.getElementById("myImage").src = imagePath; 
