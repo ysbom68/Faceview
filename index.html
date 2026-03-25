@@ -76,7 +76,7 @@
 
 
   <script>
-  let GenderFilter = "F"
+  let GenderFilter
     function generateNumber() {
       //random number 1-96
   let randomNumber = Math.floor(Math.random() * 96) + 1;
@@ -90,11 +90,11 @@
       }
 slider.oninput = function () {
   if (this.value == 1) {
-    display.textContent = "F";
-    GenderFilter = "F";
+  display.textContent = "F";
+  GenderFilter = "F";
   } else {
-    display.textContent = "M";
-    GenderFilter = "M";
+  display.textContent = "M";
+  GenderFilter = "M";
   }
 };
   </script>
