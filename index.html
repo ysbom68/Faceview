@@ -55,14 +55,6 @@
   </style>
 </head>
 <body>
-slider.oninput = function () {
-  if (this.value == 1) {
-    GenderFilter = "F";
-  } else {
-    GenderFilter = "M";
-  }
-  display.textContent = GenderFilter;
-};
 
   <div class="text">
     WestViewer
@@ -78,6 +70,14 @@ slider.oninput = function () {
     document.getElementById("valueDisplay").textContent = this.value;
   };
 </script>
+slider.oninput = function () {
+  if (this.value == 1) {
+    GenderFilter = "F";
+  } else {
+    GenderFilter = "M";
+  }
+  display.textContent = GenderFilter;
+};
 
   <script>
   let GenderFilter = "F"
