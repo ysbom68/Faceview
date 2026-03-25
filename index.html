@@ -65,6 +65,7 @@
     <button onclick="generateNumber()">Smash</button>
     <button onclick="generateNumber()">Pass</button>
     <input type="range" id="slider" min="1" max="2">
+    valueDisplay if 
     <p id="valueDisplay"></p>
   </div>
   <script>
@@ -87,6 +88,15 @@
      // change image
   document.getElementById("myImage").src = imagePath; 
       }
+slider.oninput = function () {
+  if (this.value == 1) {
+    display.textContent = "F";
+    GenderFilter = "F";
+  } else {
+    display.textContent = "M";
+    GenderFilter = "M";
+  }
+};
   </script>
   
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
