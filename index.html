@@ -36,7 +36,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       
-      outline: 10px solid black;   /* black outline */
+      outline: 6px solid black;   /* black outline */
       outline-offset: 0;           /* sits flush with image */
     }
     button {
@@ -49,10 +49,18 @@
       background-color: #C10A0A;
       color: white;
       cursor: pointer;
+      
+    outline: 2px solid black;
+  outline-offset: 0;
+
+  transition: transform 0.2s, box-shadow 0.2s;
     }
 
     button:hover {
-      background-color: #650304;
+    background-color: #650304;
+  /
+  transform: scale(1.05);          
+  box-shadow: 0 0 0 4px #C10A0A;
     }
   </style>
 </head>
