@@ -63,7 +63,8 @@
   box-shadow: 0 0 0 4px #C10A0A;
     }
 input[type="range"] {
-  -webkit-appearance: none;    
+  -webkit-appearance: none;  
+  margin-top: 20px;
   width: 320px;
   height: 14px;
   border-radius: 7px;
@@ -146,7 +147,21 @@ function generateNumber() {
   let imagePath = randomNumber + ".jpg";
   document.getElementById("myImage").src = imagePath;
   document.getElementById("output").textContent = imagePath;
-}
+  
+    const slider = document.getElementById("slider");
+
+slider.oninput = function () {
+  const value = parseInt(this.value);
+  const display = document.getElementById("valueDisplay");
+
+  if (value === 1) {
+    display.textContent = "F";
+    this.style.background = "#888888";
+  } else {
+    display.textContent = "M";
+    this.style.background = "#C10A0A"; 
+  }
+};
 </script>
   
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
