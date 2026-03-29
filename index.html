@@ -86,12 +86,20 @@ slider.oninput = function () {
 };
 
 // Main function
+
 function generateNumber() {
-  let randomNumber = Math.floor(Math.random() * 96) + 1;
+  let randomNumber;
 
-  let imagePath = GenderFilter + randomNumber + ".jpg";
+  if (GenderFilter === "F") {
+    // 1–50
+    randomNumber = Math.floor(Math.random() * 50) + 1;
+  } else {
+    // 51–100
+    randomNumber = Math.floor(Math.random() * 50) + 51;
+  }
+
+  let imagePath = randomNumber + ".jpg";
   document.getElementById("myImage").src = imagePath;
-
   document.getElementById("output").textContent = imagePath;
 }
 </script>
