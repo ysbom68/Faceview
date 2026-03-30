@@ -172,25 +172,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   document.getElementById("myImage").src = imagePath;
   document.getElementById("output").textContent = imagePath;
     }
-    const slider = document.getElementById("slider");
-
-function updateSliderBackground(slider) {
-  const value = slider.value;
-  const min = slider.min;
-  const max = slider.max;
-  const percent = ((value - min) / (max - min)) * 100;
-
-  // Set a red fill to left of thumb and gray to right
-  slider.style.background = `linear-gradient(to right, #C10A0A 0%, #C10A0A ${percent}%, #ddd ${percent}%, #ddd 100%)`;
-}
-
-// Initialize
-updateSliderBackground(slider);
-
-// Update on input
-slider.addEventListener("input", function() {
-  updateSliderBackground(this);
-});
+    
   </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
