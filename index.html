@@ -58,7 +58,9 @@
       background-color: #C10A0A;
       color: white;
       cursor: pointer;
-      transition: background-color 0.2s ease, transform 0.1s ease;
+      transition: background-color 0.2s ease, 
+      transform 0.1s ease,
+      border-width 0.1s ease;
     }
     /* Hover = darker */
 button:hover {
@@ -68,6 +70,8 @@ button:hover {
 /* Click animation */
 button:active {
   transform: scale(0.95);   /* slight shrink */
+  background-color: #FF1A1A;    /* quick bright flash */
+  border-width: 3px;            /* border thickens on click */
   filter: brightness(0.9);
   transition: all 0.15s ease;
 }
