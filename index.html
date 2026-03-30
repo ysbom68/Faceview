@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Layout</title>
-   <link rel="icon" type="image/png" href="Westviewer.png">
+  <img src="Westviewer.png" class="top-right-image">
   <style>
     body {
       margin: 0;
@@ -36,6 +36,14 @@
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .top-right-image {
+    position: fixed;
+    top: 10px;     /* distance from top */
+    right: 10px;   /* distance from right */
+    width: 100px;  /* adjust size */
+    height: auto;
+    z-index: 1000; /* keeps it above other elements */
     }
 
     button {
