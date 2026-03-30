@@ -39,7 +39,7 @@
     .top-left-image {
     position: fixed;
     top: 0px;     /* distance from top */
-    right: 0px;   /* distance from right */
+    left: 0px;   /* distance from right */
     width: 100px;  /* adjust size */
     height: auto;
     z-index: 1000; /* keeps it above other elements */
@@ -59,21 +59,6 @@
       color: white;
       cursor: pointer;
       transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-/
-button:hover {
-  background-color: #650304;
-}
-
-/* Subtle click feedback */
-button:active {
-  transform: scale(0.97);
-}
-    }
-
-    button:hover {
-      background-color: #650304;
     }
   </style>
 </head>
