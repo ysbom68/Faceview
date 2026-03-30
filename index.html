@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WestViewer</title>
+  <title>Layout</title>
   <style>
     body {
       margin: 0;
@@ -35,10 +35,8 @@
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      
-      outline: 6px solid black;   /* black outline */
-      outline-offset: 0;           /* sits flush with image */
     }
+
     button {
       font-family: inherit; /* uses Montserrat */
       margin-top: 15px;
@@ -49,53 +47,11 @@
       background-color: #C10A0A;
       color: white;
       cursor: pointer;
-      
-    outline: 2px solid black;
-  outline-offset: 0;
-transition: transform 0.2s, box-shadow 0.2s;
     }
+
     button:hover {
-    background-color: #650304;
-  /
-  transform: scale(1.05);          
-  box-shadow: 0 0 0 4px #C10A0A;
+      background-color: #650304;
     }
-input[type="range"] {
-  -webkit-appearance: none;  
-  margin-top: 20px;
-  width: 320px;
-  height: 14px;
-  border-radius: 7px;
-  background: #C10A0A;     
-  outline: 2px solid black;   
-  outline-offset: 0;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: white;
-  border: 2px solid black;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
-}
-
-/* Hover effect on thumb */
-input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-  background: #ffcccc; 
-}
-
-/* Active while dragging */
-input[type="range"]::-webkit-slider-thumb:active {
-  transform: scale(1.3);
-  background: #ffffff;
-}
   </style>
 </head>
 <body>
@@ -103,66 +59,43 @@ input[type="range"]::-webkit-slider-thumb:active {
   <div class="text">
     WestViewer
   </div>
-  <p id=""></p>
+
+  <p id="output"></p>
+
   <div class="center">
-   <img id="myImage" src="1.jpg">
+    <img id="myImage" src="1.jpg">
     <button onclick="generateNumber()">Smash</button>
     <button onclick="generateNumber()">Pass</button>
     <input type="range" id="slider" min="1" max="2" value="1">
     <p id="valueDisplay">F</p>
   </div>
- 
- <script>
-let GenderFilter = "F";
 
-const slider = document.getElementById("slider");
-const display = document.getElementById("valueDisplay");
-
-// Slider logic
-slider.oninput = function () {
-  if (this.value == 1) {
-    display.textContent = "F";
-    GenderFilter = "F";
-  } else {
-    display.textContent = "M";
-    GenderFilter = "M";
-  }
-};
-
-// Main function
-
-function generateNumber() {
-  let randomNumber;
-
-  if (GenderFilter === "F") {
-    // 1–60
-    randomNumber = Math.floor(Math.random() * 60) + 1;
-  } else {
-    // 60–95
-    randomNumber = Math.floor(Math.random() * 34) + 61;
-  }
-
-  let imagePath = randomNumber + ".jpg";
-  document.getElementById("myImage").src = imagePath;
-  document.getElementById("output").textContent = imagePath;
-  
+  <script>
+    let GenderFilter = "F";
     const slider = document.getElementById("slider");
+    const display = document.getElementById("valueDisplay");
 
-slider.oninput = function () {
-  const value = parseInt(this.value);
-  const display = document.getElementById("valueDisplay");
+    // Slider logic
+    slider.oninput = function () {
+      if (this.value == 1) {
+        display.textContent = "F";
+        GenderFilter = "F";
+      } else {
+        display.textContent = "M";
+        GenderFilter = "M";
+      }
+    };
 
-  if (value === 1) {
-    display.textContent = "F";
-    this.style.background = "#888888";
-  } else {
-    display.textContent = "M";
-    this.style.background = "#C10A0A"; 
-  }
-};
-</script>
-  
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  
+    // Main function
+    function generateNumber() {
+      let randomNumber = Math.floor(Math.random() * 96) + 1;
+      let imagePath = GenderFilter + randomNumber + ".jpg";
+      document.getElementById("myImage").src = imagePath;
+      document.getElementById("output").textContent = imagePath;
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
 </body>
-  </html>
+</html>
