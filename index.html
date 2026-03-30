@@ -60,9 +60,18 @@
       cursor: pointer;
       transition: background-color 0.2s ease, transform 0.1s ease;
     }
+    /* Hover = darker */
+button:hover {
+  background-color: #650304;
+  }
+
+/* Click animation */
+button:active {
+  transform: scale(0.95);   /* slight shrink */
+  filter: brightness(0.9);
+  transition: all 0.15s ease;
+}
   </style>
-</head>
-<body>
 
   <div class="text">
   
