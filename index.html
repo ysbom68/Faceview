@@ -141,8 +141,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
     <img id="myImage" src="1.jpg">
     <button onclick="generateNumber()">Smash</button>
     <button onclick="generateNumber()">Pass</button>
-    <input type="range" id="slider" min="1" max="2" value="1">
-    <p id="valueDisplay">F</p>
+    <input type="range" id="slider" min="1" max="3" value="1">
+    <p id="valueDisplay">Female</p>
   </div>
 
   <script>
@@ -155,14 +155,10 @@ input[type="range"]::-webkit-slider-thumb:hover {
       if (this.value == 1) {
         display.textContent = "Female";
         GenderFilter = "F";
-      } 
-     slider.oninput = function () {
-      if (this.value == 2) {
+      } else if (this.value == 2) {
         display.textContent = "Male";
         GenderFilter = "M";
-      }
-      slider.oninput = function () {
-       if (this.value == 2) {
+      } else if (this.value == 3) {
         display.textContent = "All";
         GenderFilter = "A";
       }
